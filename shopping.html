@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Quem Somos - Carrefive</title>
+		<title>Shopping - Carrefive</title>
 		<link
 			rel="stylesheet"
 			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -60,40 +60,56 @@
 				</div>
 			</div>
 		</nav>
-		<div style="margin-top: 56px"></div>
+		<div style="margin-top: 56px"/></div> <!-- div para evitar que o menu fique sobre o conteudo -->
 
-        
 		<section class="container py-5">
-			<h2 class="mb-4">Quem Somos</h2>
+			<h2 class="mb-4">Shopping</h2>
 
-			<!-- COMPONENTE UTILIZADO: Cards + Progress Bars -->
-			<div class="row">
-				<div class="col-md-6">
-					<h4>Nossa Missão</h4>
-					<p>Oferecer produtos de qualidade com o melhor preço.</p>
+			<!-- COMPONENTE UTILIZADO: Carousel -->
+			<div
+				id="carouselExampleIndicators"
+				class="carousel slide"
+				data-bs-ride="carousel"
+			>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img
+							src="assets/img/loja1.jpg"
+							class="d-block w-100"
+							alt="Loja 1"
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							src="assets/img/loja2.jpg"
+							class="d-block w-100"
+							alt="Loja 2"
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							src="assets/img/loja3.jpg"
+							class="d-block w-100"
+							alt="Loja 3"
+						/>
+					</div>
 				</div>
-
-				<div class="col-md-6">
-					<h4>Nossos Valores</h4>
-					<p>Compromisso, responsabilidade e respeito ao consumidor.</p>
-				</div>
-			</div>
-
-			<h4 class="mt-5">Nossa Evolução</h4>
-			<div class="progress my-3">
-				<div class="progress-bar" role="progressbar" style="width: 75%">
-					Crescimento 2025
-				</div>
-			</div>
-
-			<div class="progress my-3">
-				<div
-					class="progress-bar bg-success"
-					role="progressbar"
-					style="width: 90%"
+				<button
+					class="carousel-control-prev"
+					type="button"
+					data-bs-target="#carouselExampleIndicators"
+					data-bs-slide="prev"
 				>
-					Satisfação dos clientes
-				</div>
+					<span class="carousel-control-prev-icon"></span>
+				</button>
+				<button
+					class="carousel-control-next"
+					type="button"
+					data-bs-target="#carouselExampleIndicators"
+					data-bs-slide="next"
+				>
+					<span class="carousel-control-next-icon"></span>
+				</button>
 			</div>
 		</section>
 

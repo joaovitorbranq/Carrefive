@@ -11,9 +11,9 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<div class="container-fluid pe-2 ps-5">
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="index.html">
 					<img
 						src="assets/img/logo.png"
 						alt="Logo"
@@ -37,23 +37,70 @@
 
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<div class="navbar-nav">
-						<a
-							class="nav-link active me-3"
-							aria-current="page"
-							href="products.html"
-						>
-							Meus Produtos
-						</a>
-						<a class="nav-link me-3" href="about.html"> Quem Somos </a>
-					</div>
-					<div class="navbar-nav ms-auto">
-						<a class="nav-link" href="#">Meu Perfil</a>
+						<div class="nav-item dropdown me-3">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="produtosDropdown"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								Produtos
+							</a>
+							<ul class="dropdown-menu">
+								<!-- <li><a class="dropdown-item" href="#products">Todos os produtos</a></li> -->
+								<li><a class="dropdown-item" href="shopping.html">Shopping</a></li>
+								<li><a class="dropdown-item" href="mercado.html">Mercado</a></li>
+								<li><a class="dropdown-item" href="drogaria.html">Drogaria</a></li>
+							</ul>
+						</div>
+						<a class="nav-link" href="#about">Quem Somos</a>
 					</div>
 				</div>
 			</div>
 		</nav>
+		<div style="margin-top: 56px"/></div> <!-- div para evitar que o menu fique sobre o conteudo -->
 
-		<!-- você pode colocar aqui um conteúdo inicial ou redirecionar direto para uma das páginas -->
+
+		<section id="products" class="py-5">
+			<div class="container">
+				<h2>Produtos</h2>
+				<p>
+					Aqui você lista os produtos do supermercado, seja em cards, tabela,
+					etc.
+				</p>
+				<div class="row row-cols-1 row-cols-md-3 g-4">
+					<div class="col">
+						<div class="card">
+							<img
+								src="assets/img/produto1.jpg"
+								class="card-img-top"
+								alt="Produto 1"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Produto 1</h5>
+								<p class="card-text">Descrição breve.</p>
+								<a href="#" class="btn btn-primary">Comprar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div style="height: 1000px"></div>
+
+		<section id="about" class="py-5 bg-light">
+			<div class="container">
+				<h2>Quem Somos</h2>
+				<p>
+					Somos um supermercado online criado para ... (conte sua história,
+					missão, visão, equipe etc.).
+				</p>
+				<!-- Você pode incluir cards de equipe, timeline, imagens, etc. -->
+			</div>
+		</section>
 
 		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/main.js"></script>
