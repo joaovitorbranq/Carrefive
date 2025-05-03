@@ -55,59 +55,83 @@
 								<li><a class="dropdown-item" href="drogaria.html">Drogaria</a></li>
 							</ul>
 						</div>
-						<a class="nav-link" href="#about">Quem Somos</a>
+						<a class="nav-link" href="about.html">Quem Somos</a>
 					</div>
 				</div>
 			</div>
 		</nav>
 		<div style="margin-top: 56px"/></div> <!-- div para evitar que o menu fique sobre o conteudo -->
 
+		<section class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Mercado</h2>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/mercado/chandelle.webp" class="card-img-top" alt="Mercado 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Chandelle</h5>
+                                <p class="card-text">Chandelle saber chocolate.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/mercado/desodorante.webp" class="card-img-top" alt="Mercado 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Desodorante</h5>
+                                <p class="card-text">Desodorante Dove original.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/mercado/ferrero-rocher.webp" class="card-img-top" alt="Mercado 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Chocolate</h5>
+                                <p class="card-text">Chocolate Ferrero Rocher.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/mercado/vinho.webp" class="card-img-top" alt="Mercado 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Vinho</h5>
+                                <p class="card-text">Vinho Reservado Carmenere.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<section class="container py-5">
-			<h2 class="mb-4">Mercado</h2>
-
-			<!-- COMPONENTE UTILIZADO: Accordion -->
-			<div class="accordion" id="accordionExample">
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingOne">
-						<button
-							class="accordion-button"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#collapseOne"
-						>
-							Frutas
-						</button>
-					</h2>
-					<div
-						id="collapseOne"
-						class="accordion-collapse collapse show"
-						data-bs-parent="#accordionExample"
-					>
-						<div class="accordion-body">Maçã, Banana, Laranja...</div>
-					</div>
-				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingTwo">
-						<button
-							class="accordion-button collapsed"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#collapseTwo"
-						>
-							Legumes
-						</button>
-					</h2>
-					<div
-						id="collapseTwo"
-						class="accordion-collapse collapse"
-						data-bs-parent="#accordionExample"
-					>
-						<div class="accordion-body">Cenoura, Tomate, Batata...</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        <!-- Modal de Compra -->
+        <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCompraLabel">Comprar Produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="quantidade" class="form-label">Quantidade:</label>
+                        <input type="number" class="form-control" id="quantidade" min="1" value="1">
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Concluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	</body>

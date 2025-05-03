@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Drogaria - Carrefive</title>
+		<link
+			rel="stylesheet"
+			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<div class="container-fluid pe-2 ps-5">
+				<a class="navbar-brand" href="index.html">
+					<img
+						src="assets/img/logo.png"
+						alt="Logo"
+						width="30"
+						height="30"
+						class="d-inline-block align-text-top"
+					/>
+					Carrefive
+				</a>
+				<!-- botão que abre/fecha o menu em telas pequenas -->
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="navbar-nav">
+						<div class="nav-item dropdown me-3">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="produtosDropdown"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								Produtos
+							</a>
+							<ul class="dropdown-menu">
+								<!-- <li><a class="dropdown-item" href="#products">Todos os produtos</a></li> -->
+								<li><a class="dropdown-item" href="shopping.html">Shopping</a></li>
+								<li><a class="dropdown-item" href="mercado.html">Mercado</a></li>
+								<li><a class="dropdown-item" href="drogaria.html">Drogaria</a></li>
+							</ul>
+						</div>
+						<a class="nav-link" href="about.html">Quem Somos</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div style="margin-top: 56px"></div>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Drogaria</h2>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/drogaria/dipirona.webp" class="card-img-top" alt="Remédio 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Dipirona</h5>
+                                <p class="card-text">Para dores de cabeça e febre.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/drogaria/dorflex.webp" class="card-img-top" alt="Remédio 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Dorflex</h5>
+                                <p class="card-text">Alívio rápido para dores comuns.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/drogaria/hidratante.webp" class="card-img-top" alt="Remédio 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Hidratante</h5>
+                                <p class="card-text">Hidrata e refresca a pele.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/drogaria/protetor-solar.webp" class="card-img-top" alt="Remédio 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Protetor Solar</h5>
+                                <p class="card-text">Protege sua pele dos raios UV.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Compra -->
+        <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCompraLabel">Comprar Produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="quantidade" class="form-label">Quantidade:</label>
+                        <input type="number" class="form-control" id="quantidade" min="1" value="1">
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Concluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

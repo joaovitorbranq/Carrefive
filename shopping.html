@@ -55,63 +55,86 @@
 								<li><a class="dropdown-item" href="drogaria.html">Drogaria</a></li>
 							</ul>
 						</div>
-						<a class="nav-link" href="#about">Quem Somos</a>
+						<a class="nav-link" href="about.html">Quem Somos</a>
 					</div>
 				</div>
 			</div>
 		</nav>
 		<div style="margin-top: 56px"/></div> <!-- div para evitar que o menu fique sobre o conteudo -->
 
-		<section class="container py-5">
-			<h2 class="mb-4">Shopping</h2>
 
-			<!-- COMPONENTE UTILIZADO: Carousel -->
-			<div
-				id="carouselExampleIndicators"
-				class="carousel slide"
-				data-bs-ride="carousel"
-			>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img
-							src="assets/img/loja1.jpg"
-							class="d-block w-100"
-							alt="Loja 1"
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							src="assets/img/loja2.jpg"
-							class="d-block w-100"
-							alt="Loja 2"
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							src="assets/img/loja3.jpg"
-							class="d-block w-100"
-							alt="Loja 3"
-						/>
-					</div>
-				</div>
-				<button
-					class="carousel-control-prev"
-					type="button"
-					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide="prev"
-				>
-					<span class="carousel-control-prev-icon"></span>
-				</button>
-				<button
-					class="carousel-control-next"
-					type="button"
-					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide="next"
-				>
-					<span class="carousel-control-next-icon"></span>
-				</button>
-			</div>
-		</section>
+		<section class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Shopping</h2>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/shopping/cama.webp" class="card-img-top" alt="Shopping 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Cama Box</h5>
+                                <p class="card-text">Cama de solteiro com box para armazenamento.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/shopping/celular.webp" class="card-img-top" alt="Shopping 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Iphone 16</h5>
+                                <p class="card-text">Iphone 16 PRO MAX.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/shopping/pneu.webp" class="card-img-top" alt="Shopping 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Pneu</h5>
+                                <p class="card-text">Pneu para carros de médio porte.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="assets/img/shopping/tv.webp" class="card-img-top" alt="Shopping 4">
+                            <div class="card-body">
+                                <h5 class="card-title">TV</h5>
+                                <p class="card-text">SmartTV 50 polegadas.</p>
+                                <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Compra -->
+        <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCompraLabel">Comprar Produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="quantidade" class="form-label">Quantidade:</label>
+                        <input type="number" class="form-control" id="quantidade" min="1" value="1">
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Concluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	</body>

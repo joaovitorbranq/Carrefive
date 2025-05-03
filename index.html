@@ -9,6 +9,7 @@
 			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer"/>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -55,52 +56,67 @@
 								<li><a class="dropdown-item" href="drogaria.html">Drogaria</a></li>
 							</ul>
 						</div>
-						<a class="nav-link" href="#about">Quem Somos</a>
+						<a class="nav-link" href="about.html">Quem Somos</a>
 					</div>
 				</div>
 			</div>
 		</nav>
 		<div style="margin-top: 56px"/></div> <!-- div para evitar que o menu fique sobre o conteudo -->
 
+				<!-- Carousel -->
+		<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: 56px">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
 
-		<section id="products" class="py-5">
-			<div class="container">
-				<h2>Produtos</h2>
-				<p>
-					Aqui você lista os produtos do supermercado, seja em cards, tabela,
-					etc.
-				</p>
-				<div class="row row-cols-1 row-cols-md-3 g-4">
-					<div class="col">
-						<div class="card">
-							<img
-								src="assets/img/produto1.jpg"
-								class="card-img-top"
-								alt="Produto 1"
-							/>
-							<div class="card-body">
-								<h5 class="card-title">Produto 1</h5>
-								<p class="card-text">Descrição breve.</p>
-								<a href="#" class="btn btn-primary">Comprar</a>
-							</div>
-						</div>
-					</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="assets/img/banners/banner1.webp" class="d-block w-100" alt="Banner 1" />
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+				<div class="carousel-item">
+					<img src="assets/img/banners/banner2.webp" class="d-block w-100" alt="Banner 2" />
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+				<div class="carousel-item">
+					<img src="assets/img/banners/banner3.webp" class="d-block w-100" alt="Banner 3" />
+					<div class="carousel-caption d-none d-md-block"></div>
 				</div>
 			</div>
-		</section>
+
+			<button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Anterior</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Próximo</span>
+			</button>
+		</div>
 
 		<div style="height: 1000px"></div>
 
-		<section id="about" class="py-5 bg-light">
-			<div class="container">
-				<h2>Quem Somos</h2>
-				<p>
-					Somos um supermercado online criado para ... (conte sua história,
-					missão, visão, equipe etc.).
-				</p>
-				<!-- Você pode incluir cards de equipe, timeline, imagens, etc. -->
+		<footer class="bg-light text-center text-lg-start border-top mt-5">
+			<div class="container p-4">
+				<h5 class="mb-3">Siga-nos nas redes sociais</h5>
+				<div class="d-flex gap-4 fs-4">
+					<a href="#" class="text-dark" aria-label="Facebook">
+						<i class="fa-brands fa-facebook"></i>
+					</a>
+					<a href="#" class="text-dark" aria-label="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#" class="text-dark" aria-label="YouTube">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
 			</div>
-		</section>
+			<div class="text-center text-muted py-3" style="background-color: #f8f9fa;">
+				© 2025 Carrefive. Todos os direitos reservados.
+			</div>
+		</footer>
 
 		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/main.js"></script>
