@@ -9,6 +9,7 @@
 			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer"/>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -65,6 +66,11 @@
 		<section class="py-5">
             <div class="container">
                 <h2 class="mb-4">Mercado</h2>
+                <div class="d-flex justify-content-end align-items-center mb-4">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                        Adicionar produto   
+                    </button>
+                </div>
                 <div class="row row-cols-1 row-cols-md-4 g-4">
                     <div class="col">
                         <div class="card h-100">
@@ -113,6 +119,26 @@
             </div>
         </section>
 
+        <footer class="bg-light text-center text-lg-start border-top mt-5">
+			<div class="container p-4">
+				<h5 class="mb-3">Siga-nos nas redes sociais</h5>
+				<div class="d-flex gap-4 fs-4">
+					<a href="#" class="text-dark" aria-label="Facebook">
+						<i class="fa-brands fa-facebook"></i>
+					</a>
+					<a href="#" class="text-dark" aria-label="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#" class="text-dark" aria-label="YouTube">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
+			</div>
+			<div class="text-center text-muted py-3" style="background-color: #f8f9fa;">
+				© 2025 Carrefive. Todos os direitos reservados.
+			</div>
+		</footer>
+
         <!-- Modal de Compra -->
         <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -129,6 +155,63 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="button" class="btn btn-primary">Concluir</button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal de Adicionar Produto -->
+        <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addProductModalLabel">Adicionar Produto</h5>
+                        <!-- Botão de fechar -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                        <!-- Nome do produto -->
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Nome do produto</label>
+                            <input
+                            type="text"
+                            class="form-control"
+                            id="productName"
+                            name="productName"
+                            placeholder="Digite o nome"
+                            required
+                            />
+                        </div>
+                        <!-- Descrição -->
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descrição</label>
+                            <textarea
+                            class="form-control"
+                            id="description"
+                            name="description"
+                            rows="3"
+                            placeholder="Descreva o produto"
+                            required
+                            ></textarea>
+                        </div>
+                        <!-- Unidade de medida -->
+                        <div class="mb-3">
+                            <label for="unitType" class="form-label">Unidade de medida</label>
+                            <select class="form-select" id="unitType" name="unitType" required>
+                            <option value="" selected disabled>Selecione</option>
+                            <option value="kg">kg</option>
+                            <option value="gramas">gramas</option>
+                            <option value="litros">litros</option>
+                            <option value="metros">metros</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
